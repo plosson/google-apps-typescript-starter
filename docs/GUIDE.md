@@ -40,3 +40,42 @@ function sayHello(name: string): string {
 
 ## Dynamic menu items 
 
+Create the functions dynamically as follows : 
+
+```typescript
+installFunctions();
+
+/**
+ * Create goToSheet_xxx function for each sheet in the document
+ */
+function installFunctions() {
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    ss.getSheets().forEach(s => {
+        const id = s.getSheetId();
+        this[`goToSheet_${id}`] = () => ss.getSheetByName(s.getName()).activate();
+    })
+}
+
+```
+
+## Simple logging service 
+
+console.log is nice, but when running a lot of background tasks etc .. it's useful to allow the normal user to see 
+what is happening in the application. 
+
+Create a Logs sheet in the document 
+
+Create a Constants.ts file 
+
+```typescript
+export class Constants {
+    public static SHEET_LOGS: string = "Logs";
+}
+```
+
+Create a LoggingService.ts file 
+
+```typescript
+
+
+```

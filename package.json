@@ -1,0 +1,24 @@
+{
+  "name": "google-apps-typescript-starter",
+  "version": "1.0.0",
+  "description": "A Google Apps Script starter in Typescript",
+  "scripts": {
+    "build": "tsc",
+    "push": "clasp push",
+    "watch": "clasp push -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plosson/google-apps-typescript-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plosson/google-apps-typescript-starter/issues"
+  },
+  "homepage": "https://github.com/plosson/google-apps-typescript-starter#readme",
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.58",
+    "typescript": "^4.9.5"
+  }
+}

@@ -1,4 +1,5 @@
 import Sheet = GoogleAppsScript.Spreadsheet.Sheet;
+import {LoggingService} from "./lib/LoggingService";
 
 installFunctions();
 
@@ -14,7 +15,8 @@ function onOpen() {
 }
 
 function menu_currentTime() {
-    SpreadsheetApp.getActive().toast("Time is " + new Date());
+    LoggingService.logUi("Time is " + new Date());
+    LoggingService.logSheet("Time is " + new Date());
 }
 
 function sayHello(name: string): string {
